@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARRAYS </title>
+</head>
+<body>
+    <h1>
+        14Nov  3er EXERCICI
+    </h1>
+    <p1 id="parraf1">PARRAFO 1</p1>
+    <p1 id="parraf2">PARRAFO 2</p1>
+    <p1 id="parraf3">PARRAFO 3</p1>
+    <p1 id="parraf4">PARRAFO 4</p1>
+    <div id="parrafo">PARRAFO </div>
+    <script>
+        var noms=[]
+        noms.push("Jordi")
+        noms.push("Eva")
+        noms.push("Pere")
+        noms.push("Dani")
+        noms.push("Laura")
+// Escriure quants caracteres té cada nom i el nom
+    // Primer amb un for 
+        for  (var i=0;i<noms.length;i++) {
+            console.log("El elemento :" , i, noms[i], " tiene " , noms[i].length, " letras") }
+    // despres amb foreach
+        noms.forEach(function( valor,posicio){
+            // parrafo="parraf"+toString(posicio)
+            // document.getElementById(parrafo).innerHTML=("EL ALUMNO"+ noms[posicio] + " tiene " + noms[posicio].length+ " caracteres")
+            console.log("EL ELEMENTO  :" , posicio, noms[posicio], " tiene " , noms[posicio].length, " letras") })
+      // formato ES6
+        noms.forEach((valor,posicio,arr)=>{
+             console.log("THE ELEMENT ES6  :" , posicio, "es" , valor , " tiene " , valor.length, " letras") })
+             document.getElementById("parrafo").innerHTML+=("EL ALUMNO"+ noms[posicio] + " tiene " + noms[posicio].length+ " caracteres")    
+    </script> 
+</body>
+</html>

@@ -8,15 +8,42 @@
 </head>
 <body>
     <h1>Ejercicios Condiciones </h1>
-    <script>
-        // Si enter es mes gran de 30 o pequeño de 20
-        enter1=0
-        if (enter1>0) {
-            console.log("El enter ", enter1, "es mes gran de 0")}
-                else {if (enter1<0)
-                            {console.log ("El enter ", enter1, "es mas pequeño que 20")}
-                            else {console.log ("Es Cero")}
-        }
-    </script>
+    <p1 id="head1"></p1>
 </body>
 </html>
+
+<script>
+    // Si enter es mes gran de 30 o pequeño de 20
+    enter1=0
+    if (enter1>0) {
+        console.log("El enter ", enter1, "es mes gran de 0")}
+            else {if (enter1<0)
+                        {console.log ("El enter ", enter1, "es mas pequeño que 20")}
+                        else {console.log ("Es Cero")}
+    }
+   
+temperhoy=28
+    fiebre=function (temper) {
+        if (temper<35){return "Perill"} 
+            else if (temper<36.5){return "No te febre"}
+                else if (temper<38.5){return "Te força febre"}
+                    else {return "té molta febre"}  
+    }
+    console.log("Dime la temperatura : ", temperhoy , fiebre(temperhoy))
+
+    document.getElementById("head1").innerHTML=("Su temperatura es :"+ temperhoy+ fiebre(temperhoy))
+
+var pacientes= [34.5,42.3,39.0, 36.7]
+
+pacientes.forEach (function (valor,posicio,elarray){
+
+    console.log ("El paciente nº : ", posicio, "tiene :" , valor," ªC", fiebre(valor))
+})
+
+
+for(var i=0;i<pacientes.length; i++){
+    console.log("LA FEBRE del pacient ",i, "es",pacientes[i])
+    fiebre(pacientes[i])
+}
+
+</script>

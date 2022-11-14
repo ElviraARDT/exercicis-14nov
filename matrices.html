@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATRICES</title>
+</head>
+<body>
+    <script>
+        var excel=[
+            [10,12,14,1,20,3],
+            [2,1,19,11,2,32],
+            [40,12,300,2,42,31]
+        ]
+        var sumatori=0
+
+    for(var fila=0;fila<excel.length;fila++){
+        var arr =excel[fila]
+        for (var columna=0;columna<arr.length;columna++){
+            var valor=arr[columna]
+            sumatori=sumatori+valor
+            console.log (valor)
+        }
+    }
+            console.log (sumatori)
+    // Con foreach
+    excel.forEach(fila=>{
+        
+    })
+    
+    var patients2=[]
+        patients2.push({nom:"Jordi",febre:35})
+        patients2.push({nom:"Sara",febre:40})
+        patients2.push({nom:"Dani",febre:37.5})
+
+    console.log(patients2)
+
+    // ES6
+    patients2.forEach((pacient,i,patients)=>{
+        console.log("ESTEM MIRANT EL PACIENTE", pacient)
+        console.log("Hi ha ", patients.length, "pacients")
+        var seguentpacient=patients[i+1]
+        console.log("El seguent pacient es  :", seguentpacient.nom)
+    })
+    </script>
+</body>
+</html>
