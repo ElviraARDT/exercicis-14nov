@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicis-14nov VARIABLES</title>
+</head>
+<body>
+    <H1>VARIABLES</H1>
+    <p1 id="parrafo1"></p1> 
+    <p2 id="parrafo2"></p2> 
+</body>
+<script>
+    var enter1=10
+    var enter2=20
+    var decim1=30.10
+    var decim2=40.20
+    console.log ("Els dos enters sumen : ", enter1+enter2)
+    console.log ("Els dos decimals sumen : ", decim1+decim2)
+    document.getElementById("parrafo1","PRUEBA GetElement")
+    function tipodevariable(a){
+        console.log("La variable a ", "es del typo",typeof(a) ,"y tiene el valor ",a )
+    }
+    var calle="AV BARCELONA"
+    tipodevariable(enter1)
+    // otra manera
+    tipodevariable1=function(a){
+        console.log("La variable a ", "es del typo",typeof(a) ,"y tiene el valor ",a )
+    }
+    tipodevariable1(enter2)
+    tipodevariable1("Hola")
+    tipodevariable1()
+    tipodevariable1([])
+    tipodevariable1({})
+    suma=function(a,b){
+        return a+b
+    }
+    product=function(a,b){
+        return a*b
+    }
+    resta=function(a,b){
+        return a-b
+    }
+    divisio=function(a,b){
+        return a/b
+    }
+    resto=function(a,b){
+        return a&b
+    }
+    console.log ("La suma de entero 1 y 2 es : ", suma(enter1,enter2))
+    console.log ("El producto de decim1 y decim2 : ", product(decim1,decim2))
+    console.log ("La división de eneter1 y enter2 : ", divisio(enter1,enter2))
+    console.log ("El resto de enter1 y enter2 es : ", resto(enter1,enter2))
+    suma5=function(a=0,b=0){
+        return a+b
+    } // si a y b no tienen valor les da cero
+    console.log ("La suma5 vale : ", suma5(enter1,enter2))
+</script>
+</html>
